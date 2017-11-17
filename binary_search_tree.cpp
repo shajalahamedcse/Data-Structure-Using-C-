@@ -15,6 +15,9 @@ class BinarySearchTree{
     //For deleting the node
     //node*
 
+
+
+
     //Inserting function 
     node* insert(int x,node* t){
         if(t==NULL){
@@ -32,6 +35,10 @@ class BinarySearchTree{
         return t;
     } 
 
+
+
+
+
     //Inorder Traversing
     void inorderTraverse(node* t){
         if(t==NULL){
@@ -43,6 +50,10 @@ class BinarySearchTree{
             inorderTraverse(t->right);
         }
     }
+
+
+
+
     void preOrderTraverse(node *t){
         if(t==NULL){
             return;
@@ -53,6 +64,10 @@ class BinarySearchTree{
             preOrderTraverse(t->right);
         }
     }
+
+
+
+
     node* find(node* t,int x){
 
         if(t==NULL){
@@ -68,6 +83,10 @@ class BinarySearchTree{
             return t;
 
     }
+
+
+
+
     node* findMax(node* t){
         if(t==NULL){
             return NULL;
@@ -79,6 +98,10 @@ class BinarySearchTree{
             return findMax(t->right);
         }
     }
+
+
+
+
 
     node* findMin(node* t){
         if(t==NULL)
@@ -92,13 +115,21 @@ class BinarySearchTree{
             return findMin(t->left);
         }
     }
+
+
+
+
     public:
         BinarySearchTree(){
             root=NULL;
         }
+
+
         void insert(int x){
             root=insert(x,root);
         }
+
+
         void display(){
             cout<<"Inorder Traversal :"<<endl;
             inorderTraverse(root);
@@ -107,6 +138,8 @@ class BinarySearchTree{
             preOrderTraverse(root);
 
         }
+
+
         void search(int x){
             temp=root;
             temp=find(temp,x);
@@ -125,14 +158,19 @@ int main(){
     BinarySearchTree Tree;
     char quit;
     int how_many,data;
+
     cout<<"How many nodes you want to insert?"<<endl;
     cin>>how_many;
+
     for(int i=0;i<how_many;i++){
         cin>>data;
         Tree.insert(data);
     }
+
     cout<<"Display :"<<endl;
     Tree.display();
+
+    
     cout<<"Find :"<<endl;
     int fi;
     cin>>fi;
